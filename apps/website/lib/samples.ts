@@ -20,10 +20,13 @@ console.log(\`primary accent: #\${accent.toString(16)}\`);
   python: `# rora — a calm dark theme
 from dataclasses import dataclass
 
+PRIMARY = "#b59eff"  # Violet
+
 @dataclass
 class Swatch:
     name: str
     hex: str
+    role: str = "accent"
 
 def apply_theme(theme: dict[str, str]) -> None:
     """Write every CSS variable to stdout."""
@@ -32,16 +35,25 @@ def apply_theme(theme: dict[str, str]) -> None:
 
 if __name__ == "__main__":
     apply_theme({"background": "#12101c", "foreground": "#eddeff"})
+    print(f"primary accent: {PRIMARY}")
 `,
   json: `{
   "name": "Rora",
   "version": "1.0.0",
+  "author": "Rora Theme",
   "description": "A cosy, calm dark theme.",
+  "type": "dark",
   "background": "#12101c",
   "foreground": "#eddeff",
-  "accents": ["#b59eff", "#72f0c8", "#f06cb8"],
+  "accents": {
+    "violet": "#b59eff",
+    "rosa": "#f06cb8",
+    "aurora": "#72f0c8",
+    "polar": "#7ec8f4"
+  },
   "italic": true,
-  "contrast": 9.1
+  "contrast": 9.1,
+  "license": "MIT"
 }
 `,
 } as const;

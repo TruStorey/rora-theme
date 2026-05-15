@@ -15,7 +15,7 @@ export function HeroText({ totalSwatches }: Props) {
   const ease = [0.22, 1, 0.36, 1] as const;
 
   return (
-    <div className="flex flex-col items-start gap-6">
+    <div className="flex flex-col items-center gap-6 text-center">
       <motion.div
         initial={initial}
         animate={animate}
@@ -34,9 +34,35 @@ export function HeroText({ totalSwatches }: Props) {
         initial={initial}
         animate={animate}
         transition={{ duration: 0.6, ease, delay: 0.08 }}
-        className="text-6xl font-semibold tracking-tight text-rora-aurora sm:text-7xl"
+        className="text-6xl font-semibold tracking-tight sm:text-7xl"
       >
-        Rora <span className="text-rora-starlight">Theme</span>
+        <motion.span
+          aria-hidden
+          className="inline-block bg-clip-text text-transparent"
+          style={{
+            backgroundImage:
+              "linear-gradient(90deg, #b59eff 0%, #c084fc 11%, #d97fff 22%, #f06cb8 33%, #e86fa8 44%, #7ec8f4 55%, #5ab4e8 66%, #72f0c8 77%, #4dd9b0 88%, #38c4a8 100%)",
+            backgroundSize: "300% 100%",
+            backgroundPosition: "0% 50%",
+          }}
+          animate={
+            reduceMotion ? undefined : { backgroundPosition: ["0% 50%", "100% 50%"] }
+          }
+          transition={
+            reduceMotion
+              ? undefined
+              : {
+                  duration: 22,
+                  ease: "linear",
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                }
+          }
+        >
+          Rora
+        </motion.span>
+        <span className="sr-only">Rora</span>{" "}
+        <span className="text-rora-starlight">Theme</span>
       </motion.h1>
 
       <motion.p

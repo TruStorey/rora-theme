@@ -57,7 +57,7 @@ export function CodeCarousel({ slides }: Props) {
         setApi={(a) => setApi(a)}
         className="w-full"
       >
-        <CarouselContent className="-ml-4">
+        <CarouselContent className="-ml-4 pt-2 pb-4">
           {slides.map((s, i) => (
             <CarouselItem key={s.language} className="pl-4">
               <motion.div

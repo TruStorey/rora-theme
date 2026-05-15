@@ -12,7 +12,7 @@ export function CodeScreenshot({ filename, language, html, className }: Props) {
     <div
       className={cn(
         "group relative overflow-hidden rounded-2xl bg-rora-dusk ring-1 ring-rora-horizon/70",
-        "shadow-[0_30px_80px_-20px_rgba(181,158,255,0.35),0_10px_40px_-12px_rgba(114,240,200,0.18)]",
+        "shadow-[0_14px_36px_-14px_rgba(181,158,255,0.28),0_6px_16px_-8px_rgba(114,240,200,0.14)]",
         className,
       )}
     >
