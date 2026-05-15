@@ -1,0 +1,128 @@
+"use client";
+
+import { motion, useReducedMotion } from "motion/react";
+import {
+  Briefcase,
+  Code2,
+  MonitorDot,
+  Terminal,
+  type LucideIcon,
+} from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+import { CopyButton } from "@/components/copy-button";
+import { cn } from "@/lib/utils";
+
+type App = {
+  name: string;
+  blurb: string;
+  Icon: LucideIcon;
+  status: "available" | "coming";
+  copyValue?: string;
+};
+
+type Props = {
+  terminalScheme: string;
+};
+
+export function AppsGrid({ terminalScheme }: Props) {
+  const reduceMotion = useReducedMotion();
+
+  const apps: App[] = [
+    {
+      name: "Windows Terminal",
+      blurb: "Drop-in colour scheme for Windows Terminal.",
+      Icon: Terminal,
+      status: "available",
+      copyValue: terminalScheme,
+    },
+    {
+      name: "VS Code",
+      blurb: "Editor theme extension.",
+      Icon: Code2,
+      status: "coming",
+    },
+    {
+      name: "JetBrains",
+      blurb: "IntelliJ / PyCharm / WebStorm.",
+      Icon: Briefcase,
+      status: "coming",
+    },
+    {
+      name: "iTerm2",
+      blurb: "macOS terminal colour preset.",
+      Icon: MonitorDot,
+      status: "coming",
+    },
+  ];
+
+  return (
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {apps.map((app, i) => {
+        const available = app.status === "available";
+        const Icon = app.Icon;
+        return (
+          <motion.div
+            key={app.name}
+            initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{
+              duration: 0.5,
+              ease: [0.22, 1, 0.36, 1],
+              delay: reduceMotion ? 0 : i * 0.06,
+            }}
+            whileHover={reduceMotion ? undefined : { y: -3 }}
+          >
+            <Card
+              className={cn(
+                "flex h-full flex-col gap-4 p-5 transition-colors",
+                available
+                  ? "ring-1 ring-rora-horizon/60 hover:ring-rora-violet/70"
+                  : "border-dashed bg-rora-dusk/40",
+              )}
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div
+                  className={cn(
+                    "flex size-10 items-center justify-center rounded-lg",
+                    available
+                      ? "bg-rora-violet/15 text-rora-violet"
+                      : "bg-rora-twilight text-rora-veil",
+                  )}
+                >
+                  <Icon className="size-5" />
+                </div>
+                <Badge
+                  variant={available ? "default" : "outline"}
+                  className={
+                    available
+                      ? ""
+                      : "border-rora-horizon bg-transparent text-rora-mist"
+                  }
+                >
+                  {available ? "Available" : "Coming"}
+                </Badge>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-base font-semibold text-rora-starlight">
+                  {app.name}
+                </h3>
+                <p className="mt-1 text-sm text-rora-veil">{app.blurb}</p>
+              </div>
+              {app.copyValue ? (
+                <CopyButton
+                  value={app.copyValue}
+                  label="Copy scheme"
+                  variant="secondary"
+                  size="sm"
+                  className="self-start"
+                />
+              ) : null}
+            </Card>
+          </motion.div>
+        );
+      })}
+    </div>
+  );
+}
