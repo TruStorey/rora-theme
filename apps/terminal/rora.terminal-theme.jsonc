@@ -1,0 +1,28 @@
+{
+    "schemes":
+    [
+        {
+            "name": "Rora",
+            "background":         "#12101c",
+            "foreground":         "#eddeff",
+            "cursorColor":        "#f06cb8",
+            "selectionBackground":"#231f35",
+            "black":   "#0d0b14",
+            "red":     "#f06cb8",
+            "green":   "#72f0c8",
+            "yellow":  "#d97fff",
+            "blue":    "#7ec8f4",
+            "purple":  "#b59eff",
+            "cyan":    "#c084fc",
+            "white":   "#eddeff",
+            "brightBlack":  "#4e4468",
+            "brightRed":    "#f89ece",
+            "brightGreen":  "#9df5dc",
+            "brightYellow": "#e6b0ff",
+            "brightBlue":   "#a8dcf8",
+            "brightPurple": "#cdb8ff",
+            "brightCyan":   "#d4aeff",
+            "brightWhite":  "#ffffff"
+        }
+    ]
+}
