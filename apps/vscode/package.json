@@ -1,0 +1,35 @@
+{
+  "name": "rora",
+  "displayName": "Rora",
+  "description": "A cosy, calm dark theme — vivid aurora accents against a deep arctic night.",
+  "version": "0.1.1",
+  "publisher": "rora-theme",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "color-theme",
+    "rora",
+    "aurora"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Rora",
+        "uiTheme": "vs-dark",
+        "path": "./themes/rora-color-theme.json"
+      }
+    ]
+  },
+  "galleryBanner": {
+    "color": "#12101c",
+    "theme": "dark"
+  }
+}
