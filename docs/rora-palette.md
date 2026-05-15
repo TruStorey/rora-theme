@@ -2,7 +2,7 @@
 
 > *A cosy, calm dark theme — vivid aurora accents against a deep arctic night.*
 
-Full palette reference · v6 · 25 colours
+Full palette reference · v1 · 25 colours
 
 ---
 
