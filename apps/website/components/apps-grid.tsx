@@ -2,13 +2,16 @@
 
 import { motion, useReducedMotion } from "motion/react";
 import {
+  ArrowUpRight,
   Briefcase,
   Code2,
+  Ghost,
   MonitorDot,
   Terminal,
   type LucideIcon,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CopyButton } from "@/components/copy-button";
 import { cn } from "@/lib/utils";
@@ -19,6 +22,7 @@ type App = {
   Icon: LucideIcon;
   status: "available" | "coming";
   copyValue?: string;
+  viewUrl?: string;
 };
 
 type Props = {
@@ -38,9 +42,19 @@ export function AppsGrid({ terminalScheme }: Props) {
     },
     {
       name: "VS Code",
-      blurb: "Editor theme extension.",
+      blurb: "Editor + integrated terminal, with semantic highlighting.",
       Icon: Code2,
-      status: "coming",
+      status: "available",
+      viewUrl:
+        "https://github.com/TruStorey/rora-theme/tree/main/apps/vscode#install-local",
+    },
+    {
+      name: "Ghostty",
+      blurb: "GPU-accelerated terminal colour theme.",
+      Icon: Ghost,
+      status: "available",
+      viewUrl:
+        "https://github.com/TruStorey/rora-theme/tree/main/apps/ghostty#install",
     },
     {
       name: "JetBrains",
@@ -57,7 +71,7 @@ export function AppsGrid({ terminalScheme }: Props) {
   ];
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {apps.map((app, i) => {
         const available = app.status === "available";
         const Icon = app.Icon;
@@ -118,6 +132,18 @@ export function AppsGrid({ terminalScheme }: Props) {
                   size="sm"
                   className="self-start"
                 />
+              ) : app.viewUrl ? (
+                <Button
+                  asChild
+                  variant="secondary"
+                  size="sm"
+                  className="self-start gap-2"
+                >
+                  <a href={app.viewUrl} target="_blank" rel="noreferrer">
+                    Install guide
+                    <ArrowUpRight className="size-4" />
+                  </a>
+                </Button>
               ) : null}
             </Card>
           </motion.div>

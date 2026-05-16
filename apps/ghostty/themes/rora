@@ -1,0 +1,27 @@
+# Rora — a cosy, calm dark theme.
+# Vivid aurora accents against a deep arctic night.
+# Drop this file in ~/.config/ghostty/themes/ and set `theme = rora`.
+
+palette = 0=#0d0b14
+palette = 1=#f06cb8
+palette = 2=#72f0c8
+palette = 3=#d97fff
+palette = 4=#7ec8f4
+palette = 5=#b59eff
+palette = 6=#c084fc
+palette = 7=#eddeff
+palette = 8=#4e4468
+palette = 9=#f89ece
+palette = 10=#9df5dc
+palette = 11=#e6b0ff
+palette = 12=#a8dcf8
+palette = 13=#cdb8ff
+palette = 14=#d4aeff
+palette = 15=#ffffff
+
+background = #12101c
+foreground = #eddeff
+cursor-color = #f06cb8
+cursor-text = #12101c
+selection-background = #231f35
+selection-foreground = #eddeff

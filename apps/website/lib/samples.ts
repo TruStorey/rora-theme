@@ -15,6 +15,7 @@ export function applyTheme(theme: Theme): void {
 }
 
 const accent = 0xb59eff;
+
 console.log(\`primary accent: #\${accent.toString(16)}\`);
 `,
   python: `# rora — a calm dark theme
