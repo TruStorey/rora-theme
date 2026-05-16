@@ -1,0 +1,253 @@
+{
+  "name": "Rora",
+  "author": "Rora Theme",
+  "variables": {
+    "void": "#0d0b14",
+    "abyss": "#12101c",
+    "dusk": "#1a1728",
+    "twilight": "#231f35",
+    "horizon": "#2e2a45",
+    "starlight": "#eddeff",
+    "veil": "#a89cc8",
+    "mist": "#7a7096",
+    "haze": "#5c5175",
+    "shadow": "#4e4468",
+    "violet": "#b59eff",
+    "dusk_rose": "#c084fc",
+    "nebula": "#d97fff",
+    "rosa": "#f06cb8",
+    "dusk_pink": "#e86fa8",
+    "polar": "#7ec8f4",
+    "glacier": "#5ab4e8",
+    "aurora": "#72f0c8",
+    "boreal": "#4dd9b0",
+    "tundra": "#38c4a8",
+    "halo": "#f0e6c0",
+    "moonlight": "#e8d5a3",
+    "dusk_gold": "#d4bc82"
+  },
+  "globals": {
+    "background": "var(twilight)",
+    "foreground": "var(starlight)",
+    "caret": "var(rosa)",
+    "block_caret": "color(var(rosa) alpha(0.45))",
+    "line_highlight": "var(horizon)",
+    "selection": "color(var(violet) alpha(0.33))",
+    "selection_border": "color(var(violet) alpha(0.5))",
+    "inactive_selection": "color(var(violet) alpha(0.14))",
+    "highlight": "color(var(violet) alpha(0.5))",
+    "find_highlight": "var(violet)",
+    "find_highlight_foreground": "var(void)",
+    "misspelling": "var(dusk_pink)",
+    "gutter": "var(twilight)",
+    "gutter_foreground": "var(shadow)",
+    "gutter_foreground_highlight": "var(veil)",
+    "line_diff_added": "var(boreal)",
+    "line_diff_modified": "var(dusk_gold)",
+    "line_diff_deleted": "var(rosa)",
+    "guide": "var(horizon)",
+    "active_guide": "var(veil)",
+    "stack_guide": "color(var(horizon) alpha(0.5))",
+    "brackets_foreground": "var(violet)",
+    "brackets_options": "underline",
+    "bracket_contents_foreground": "var(violet)",
+    "bracket_contents_options": "underline",
+    "tags_foreground": "var(dusk_rose)",
+    "tags_options": "stippled_underline",
+    "shadow": "color(var(void) alpha(0.5))",
+    "accent": "var(violet)"
+  },
+  "rules": [
+    {
+      "name": "Comment",
+      "scope": "comment, punctuation.definition.comment",
+      "foreground": "var(mist)",
+      "font_style": "italic"
+    },
+    {
+      "name": "String",
+      "scope": "string, string.quoted, string.template",
+      "foreground": "var(rosa)"
+    },
+    {
+      "name": "String escape / regexp",
+      "scope": "constant.character.escape, string.regexp",
+      "foreground": "var(dusk_pink)"
+    },
+    {
+      "name": "Number / constant",
+      "scope": "constant.numeric, constant.language, constant.other",
+      "foreground": "var(nebula)"
+    },
+    {
+      "name": "Keyword",
+      "scope": "keyword, storage.type, storage.modifier, keyword.control, keyword.declaration",
+      "foreground": "var(violet)"
+    },
+    {
+      "name": "Operator / punctuation",
+      "scope": "keyword.operator, punctuation.separator, punctuation.terminator, punctuation.accessor",
+      "foreground": "var(dusk_rose)"
+    },
+    {
+      "name": "Function",
+      "scope": "entity.name.function, support.function, meta.function-call, variable.function",
+      "foreground": "var(aurora)"
+    },
+    {
+      "name": "Type / class",
+      "scope": "entity.name.type, entity.name.class, support.class, support.type, entity.other.inherited-class",
+      "foreground": "var(polar)"
+    },
+    {
+      "name": "Interface (italic)",
+      "scope": "entity.name.type.interface",
+      "foreground": "var(polar)",
+      "font_style": "italic"
+    },
+    {
+      "name": "Tag / property name",
+      "scope": "entity.name.tag, support.type.property-name, meta.object-literal.key",
+      "foreground": "var(polar)"
+    },
+    {
+      "name": "Attribute",
+      "scope": "entity.other.attribute-name",
+      "foreground": "var(polar)",
+      "font_style": "italic"
+    },
+    {
+      "name": "Variable",
+      "scope": "variable, variable.other, meta.definition.variable",
+      "foreground": "var(starlight)"
+    },
+    {
+      "name": "Parameter (italic)",
+      "scope": "variable.parameter",
+      "foreground": "var(veil)",
+      "font_style": "italic"
+    },
+    {
+      "name": "Language variable (this / self)",
+      "scope": "variable.language, variable.language.this",
+      "foreground": "var(tundra)",
+      "font_style": "italic"
+    },
+    {
+      "name": "Decorator",
+      "scope": "meta.decorator, entity.name.function.decorator, punctuation.definition.decorator, meta.annotation",
+      "foreground": "var(tundra)"
+    },
+    {
+      "name": "Built-in constant / type",
+      "scope": "support.constant, support.type.builtin",
+      "foreground": "var(nebula)"
+    },
+    {
+      "name": "JSON / YAML key",
+      "scope": "source.json meta.mapping.key string, source.yaml meta.mapping.key string, support.type.property-name.json, support.type.property-name.css",
+      "foreground": "var(polar)"
+    },
+    {
+      "name": "Tag delimiter",
+      "scope": "punctuation.definition.tag, meta.tag",
+      "foreground": "var(dusk_rose)"
+    },
+    {
+      "name": "Heading",
+      "scope": "markup.heading, entity.name.section",
+      "foreground": "var(halo)",
+      "font_style": "bold"
+    },
+    {
+      "name": "Bold",
+      "scope": "markup.bold",
+      "foreground": "var(starlight)",
+      "font_style": "bold"
+    },
+    {
+      "name": "Italic",
+      "scope": "markup.italic",
+      "foreground": "var(starlight)",
+      "font_style": "italic"
+    },
+    {
+      "name": "Link",
+      "scope": "markup.underline.link, string.other.link",
+      "foreground": "var(glacier)"
+    },
+    {
+      "name": "Inline / fenced code",
+      "scope": "markup.raw.inline, markup.fenced_code, markup.raw.block",
+      "foreground": "var(nebula)"
+    },
+    {
+      "name": "Quote",
+      "scope": "markup.quote",
+      "foreground": "var(veil)",
+      "font_style": "italic"
+    },
+    {
+      "name": "Diff inserted",
+      "scope": "markup.inserted, meta.diff.header.to-file",
+      "foreground": "var(boreal)"
+    },
+    {
+      "name": "Diff deleted",
+      "scope": "markup.deleted, meta.diff.header.from-file",
+      "foreground": "var(dusk_pink)"
+    },
+    {
+      "name": "Diff changed",
+      "scope": "markup.changed",
+      "foreground": "var(dusk_gold)"
+    },
+    {
+      "name": "Diff range",
+      "scope": "meta.diff.range, meta.diff.index, punctuation.definition.range.diff",
+      "foreground": "var(veil)"
+    },
+    {
+      "name": "Invalid",
+      "scope": "invalid, invalid.illegal",
+      "foreground": "var(rosa)",
+      "font_style": "italic"
+    },
+    {
+      "name": "Deprecated",
+      "scope": "invalid.deprecated",
+      "foreground": "var(dusk_pink)",
+      "font_style": "italic"
+    },
+    {
+      "name": "CSS class",
+      "scope": "entity.other.attribute-name.class.css",
+      "foreground": "var(polar)"
+    },
+    {
+      "name": "CSS id",
+      "scope": "entity.other.attribute-name.id.css",
+      "foreground": "var(nebula)"
+    },
+    {
+      "name": "CSS pseudo",
+      "scope": "entity.other.attribute-name.pseudo-class.css, entity.other.attribute-name.pseudo-element.css",
+      "foreground": "var(dusk_rose)"
+    },
+    {
+      "name": "CSS unit",
+      "scope": "keyword.other.unit",
+      "foreground": "var(nebula)"
+    },
+    {
+      "name": "Template expression punctuation",
+      "scope": "punctuation.definition.template-expression, punctuation.section.embedded",
+      "foreground": "var(dusk_rose)"
+    },
+    {
+      "name": "Embedded source",
+      "scope": "meta.embedded, source.embedded",
+      "foreground": "var(starlight)"
+    }
+  ]
+}

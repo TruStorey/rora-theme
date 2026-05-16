@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "motion/react";
 import {
   ArrowUpRight,
+  Braces,
   Briefcase,
   Code2,
   Ghost,
@@ -57,6 +58,14 @@ export function AppsGrid({ terminalScheme }: Props) {
         "https://github.com/TruStorey/rora-theme/tree/main/apps/ghostty#install",
     },
     {
+      name: "Sublime Text",
+      blurb: "Colour scheme plus a matching UI theme.",
+      Icon: Braces,
+      status: "available",
+      viewUrl:
+        "https://github.com/TruStorey/rora-theme/tree/main/apps/sublime#install",
+    },
+    {
       name: "JetBrains",
       blurb: "IntelliJ / PyCharm / WebStorm.",
       Icon: Briefcase,
@@ -71,7 +80,7 @@ export function AppsGrid({ terminalScheme }: Props) {
   ];
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {apps.map((app, i) => {
         const available = app.status === "available";
         const Icon = app.Icon;
