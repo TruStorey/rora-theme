@@ -4,10 +4,17 @@
   "description": "A cosy, calm dark theme — vivid aurora accents against a deep arctic night.",
   "version": "0.1.1",
   "publisher": "rora-theme",
-  "private": true,
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TruStorey/rora-theme.git",
+    "directory": "apps/vscode"
+  },
   "engines": {
     "vscode": "^1.85.0"
+  },
+  "scripts": {
+    "package": "vsce package --skip-license --out rora.vsix"
   },
   "categories": [
     "Themes"

@@ -4,31 +4,44 @@ A cosy, calm dark theme — vivid aurora accents against a deep arctic night.
 
 ## Install (local)
 
-While the extension isn't yet published to the Marketplace, you can install
-it directly from this folder.
+Not yet on the Marketplace. The reliable way to install on **desktop VS
+Code** is the prebuilt `.vsix` — modern VS Code (1.85+) quarantines
+hand-dropped extension folders, so use one of the methods below rather
+than copying files into `~/.vscode/extensions`.
 
-### Option 1 — symlink into your extensions directory
+### Option 1 — install the prebuilt VSIX (recommended)
+
+A ready-to-install `rora.vsix` ships in this folder:
 
 ```bash
-# macOS / Linux
-ln -s "$PWD/apps/vscode" "$HOME/.vscode/extensions/rora-theme.rora-0.1.1"
+code --install-extension apps/vscode/rora.vsix
+```
+
+Or from the command palette: **Extensions: Install from VSIX…** → pick
+`rora.vsix`. Restart VS Code, then **Preferences: Color Theme** → **Rora**.
+
+### Option 2 — rebuild the VSIX yourself
+
+```bash
+cd apps/vscode
+pnpm run package          # -> rora.vsix  (runs @vscode/vsce)
+code --install-extension rora.vsix
+```
+
+### Option 3 — symlink for live development (code-server / older builds)
+
+Picks up edits on reload without repackaging. Works on code-server and
+older VS Code; desktop VS Code 1.85+ may quarantine it (see note above).
+
+```bash
+ln -sfn "$PWD/apps/vscode" "$HOME/.vscode/extensions/rora-theme.rora"
 ```
 
 ```powershell
 # Windows (PowerShell, admin)
 New-Item -ItemType SymbolicLink `
-  -Path "$env:USERPROFILE\.vscode\extensions\rora-theme.rora-0.1.1" `
+  -Path "$env:USERPROFILE\.vscode\extensions\rora-theme.rora" `
   -Target (Resolve-Path .\apps\vscode)
-```
-
-Restart VS Code. Open the command palette and run **Preferences: Color
-Theme**, then choose **Rora**.
-
-### Option 2 — package and install a `.vsix`
-
-```bash
-pnpm dlx @vscode/vsce package
-code --install-extension rora-0.1.1.vsix
 ```
 
 ## What's themed
