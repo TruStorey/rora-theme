@@ -9,7 +9,7 @@
     "descriptionForeground": "#a89cc8",
     "errorForeground": "#f06cb8",
     "icon.foreground": "#a89cc8",
-    "selection.background": "#231f35",
+    "selection.background": "#b59eff55",
     "widget.shadow": "#0d0b1480",
     "sash.hoverBorder": "#b59eff",
 
@@ -65,11 +65,11 @@
     "badge.foreground": "#0d0b14",
     "progressBar.background": "#b59eff",
 
-    "list.activeSelectionBackground": "#b59eff22",
+    "list.activeSelectionBackground": "#b59eff44",
     "list.activeSelectionForeground": "#eddeff",
-    "list.inactiveSelectionBackground": "#231f35",
+    "list.inactiveSelectionBackground": "#b59eff22",
     "list.inactiveSelectionForeground": "#eddeff",
-    "list.focusBackground": "#b59eff22",
+    "list.focusBackground": "#b59eff44",
     "list.focusForeground": "#eddeff",
     "list.focusOutline": "#b59eff66",
     "list.hoverBackground": "#1a172880",
@@ -307,7 +307,8 @@
 
     "terminal.background": "#1a1728",
     "terminal.foreground": "#eddeff",
-    "terminal.selectionBackground": "#231f35",
+    "terminal.selectionBackground": "#b59eff55",
+    "terminal.inactiveSelectionBackground": "#b59eff22",
     "terminal.border": "#0d0b14",
     "terminalCursor.foreground": "#f06cb8",
     "terminalCursor.background": "#12101c",
