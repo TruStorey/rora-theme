@@ -1,5 +1,3 @@
-import { readFileSync } from "node:fs";
-import path from "node:path";
 import { AppsGrid } from "@/components/apps-grid";
 import { CodeCarousel, type Slide } from "@/components/code-carousel";
 import { HeroText } from "@/components/hero-text";
@@ -7,11 +5,6 @@ import { SectionHeader } from "@/components/section-header";
 import { totalSwatches } from "@/lib/palette";
 import { highlight } from "@/lib/highlight";
 import { SAMPLES } from "@/lib/samples";
-
-const TERMINAL_SCHEME = readFileSync(
-  path.resolve(process.cwd(), "../terminal/rora.terminal-theme.jsonc"),
-  "utf-8",
-);
 
 export default async function Home() {
   const [tsHtml, pyHtml, jsonHtml] = await Promise.all([
@@ -40,7 +33,7 @@ export default async function Home() {
           description="Rora ships first as a Windows Terminal scheme. Editor and JetBrains packages are on the way — same palette, same hierarchy, fewer surprises."
         />
         <div className="mt-10">
-          <AppsGrid terminalScheme={TERMINAL_SCHEME} />
+          <AppsGrid />
         </div>
       </section>
     </div>

@@ -8,26 +8,32 @@ identically across every terminal you use.
 
 ## Install
 
-### Option 1 — symlink into Ghostty's themes directory
+Drop the `rora` theme file into Ghostty's user themes directory, then
+reference it from your config.
+
+### 1. Download the theme
 
 ```bash
 mkdir -p ~/.config/ghostty/themes
-ln -sfn "$PWD/apps/ghostty/themes/rora" ~/.config/ghostty/themes/rora
+curl -fsSL -o ~/.config/ghostty/themes/rora \
+  https://raw.githubusercontent.com/TruStorey/rora-theme/main/apps/ghostty/themes/rora
 ```
 
-Then add this line to `~/.config/ghostty/config`:
+The config directory differs on macOS:
+
+| Platform        | Themes directory                                          |
+| --------------- | --------------------------------------------------------- |
+| Linux           | `~/.config/ghostty/themes/`                               |
+| macOS           | `~/Library/Application Support/com.mitchellh.ghostty/themes/` |
+
+### 2. Enable it
+
+Add this line to your Ghostty config (`~/.config/ghostty/config` on
+Linux, `~/Library/Application Support/com.mitchellh.ghostty/config` on
+macOS):
 
 ```ini
 theme = rora
-```
-
-### Option 2 — point Ghostty straight at the file
-
-No copy needed; reference it by absolute path in
-`~/.config/ghostty/config`:
-
-```ini
-theme = /home/trustorey/vscode/rora-theme/apps/ghostty/themes/rora
 ```
 
 ## Apply

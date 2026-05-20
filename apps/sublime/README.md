@@ -17,30 +17,46 @@ prefer your current UI theme.
 
 ## Install
 
-### Option 1 — symlink into your User package
+Drop both files into your `Packages/User/` directory.
+
+### 1. Locate your User package
+
+In Sublime Text: **Preferences → Browse Packages…** — that opens
+`Packages/`. Open the `User/` folder inside it. Or use the path
+directly:
+
+| Platform        | User package directory                                      |
+| --------------- | ----------------------------------------------------------- |
+| Linux (ST4)     | `~/.config/sublime-text/Packages/User/`                     |
+| Linux (ST3)     | `~/.config/sublime-text-3/Packages/User/`                   |
+| macOS           | `~/Library/Application Support/Sublime Text/Packages/User/` |
+| Windows         | `%APPDATA%\Sublime Text\Packages\User\`                     |
+
+### 2. Download both files into it
+
+Linux / macOS:
 
 ```bash
-# Sublime Text 4 (Linux)
-mkdir -p ~/.config/sublime-text/Packages/User
-ln -sfn "$PWD/apps/sublime/Rora.sublime-color-scheme" \
-  ~/.config/sublime-text/Packages/User/Rora.sublime-color-scheme
-ln -sfn "$PWD/apps/sublime/Rora.sublime-theme" \
-  ~/.config/sublime-text/Packages/User/Rora.sublime-theme
+DEST=~/.config/sublime-text/Packages/User    # adjust for your OS
+curl -fsSL -o "$DEST/Rora.sublime-color-scheme" \
+  https://raw.githubusercontent.com/TruStorey/rora-theme/main/apps/sublime/Rora.sublime-color-scheme
+curl -fsSL -o "$DEST/Rora.sublime-theme" \
+  https://raw.githubusercontent.com/TruStorey/rora-theme/main/apps/sublime/Rora.sublime-theme
 ```
 
-Paths for other platforms:
+Windows (PowerShell):
 
-| Platform        | User package directory                                            |
-| --------------- | ----------------------------------------------------------------- |
-| Linux (ST4)     | `~/.config/sublime-text/Packages/User/`                           |
-| Linux (ST3)     | `~/.config/sublime-text-3/Packages/User/`                         |
-| macOS           | `~/Library/Application Support/Sublime Text/Packages/User/`       |
-| Windows         | `%APPDATA%\Sublime Text\Packages\User\`                           |
+```powershell
+$dest = "$env:APPDATA\Sublime Text\Packages\User"
+Invoke-WebRequest -OutFile "$dest\Rora.sublime-color-scheme" `
+  https://raw.githubusercontent.com/TruStorey/rora-theme/main/apps/sublime/Rora.sublime-color-scheme
+Invoke-WebRequest -OutFile "$dest\Rora.sublime-theme" `
+  https://raw.githubusercontent.com/TruStorey/rora-theme/main/apps/sublime/Rora.sublime-theme
+```
 
-### Option 2 — copy the files
-
-Drop both `Rora.sublime-color-scheme` and `Rora.sublime-theme` into that
-same `Packages/User/` directory by hand.
+Or just download the two files from
+[`apps/sublime/`](https://github.com/TruStorey/rora-theme/tree/main/apps/sublime)
+and drop them into the directory by hand.
 
 ## Apply
 

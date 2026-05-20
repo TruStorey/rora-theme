@@ -4,17 +4,14 @@ import { motion, useReducedMotion } from "motion/react";
 import {
   ArrowUpRight,
   Braces,
-  Briefcase,
   Code2,
   Ghost,
-  MonitorDot,
   Terminal,
   type LucideIcon,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CopyButton } from "@/components/copy-button";
 import { cn } from "@/lib/utils";
 
 type App = {
@@ -22,15 +19,10 @@ type App = {
   blurb: string;
   Icon: LucideIcon;
   status: "available" | "coming";
-  copyValue?: string;
   viewUrl?: string;
 };
 
-type Props = {
-  terminalScheme: string;
-};
-
-export function AppsGrid({ terminalScheme }: Props) {
+export function AppsGrid() {
   const reduceMotion = useReducedMotion();
 
   const apps: App[] = [
@@ -39,7 +31,8 @@ export function AppsGrid({ terminalScheme }: Props) {
       blurb: "Drop-in colour scheme for Windows Terminal.",
       Icon: Terminal,
       status: "available",
-      copyValue: terminalScheme,
+      viewUrl:
+        "https://github.com/TruStorey/rora-theme/tree/main/apps/terminal#install",
     },
     {
       name: "VS Code",
@@ -47,7 +40,7 @@ export function AppsGrid({ terminalScheme }: Props) {
       Icon: Code2,
       status: "available",
       viewUrl:
-        "https://github.com/TruStorey/rora-theme/tree/main/apps/vscode#install-local",
+        "https://github.com/TruStorey/rora-theme/tree/main/apps/vscode#install",
     },
     {
       name: "Ghostty",
@@ -64,18 +57,6 @@ export function AppsGrid({ terminalScheme }: Props) {
       status: "available",
       viewUrl:
         "https://github.com/TruStorey/rora-theme/tree/main/apps/sublime#install",
-    },
-    {
-      name: "JetBrains",
-      blurb: "IntelliJ / PyCharm / WebStorm.",
-      Icon: Briefcase,
-      status: "coming",
-    },
-    {
-      name: "iTerm2",
-      blurb: "macOS terminal colour preset.",
-      Icon: MonitorDot,
-      status: "coming",
     },
   ];
 
@@ -133,15 +114,7 @@ export function AppsGrid({ terminalScheme }: Props) {
                 </h3>
                 <p className="mt-1 text-sm text-rora-veil">{app.blurb}</p>
               </div>
-              {app.copyValue ? (
-                <CopyButton
-                  value={app.copyValue}
-                  label="Copy scheme"
-                  variant="secondary"
-                  size="sm"
-                  className="self-start"
-                />
-              ) : app.viewUrl ? (
+              {app.viewUrl ? (
                 <Button
                   asChild
                   variant="secondary"
