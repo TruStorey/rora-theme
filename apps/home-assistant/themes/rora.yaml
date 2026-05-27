@@ -231,7 +231,9 @@ Rora:
 
   ha-color-on-neutral-quiet: var(--ha-color-neutral-50)
   ha-color-on-neutral-normal: var(--ha-color-neutral-40)
-  ha-color-on-neutral-loud: var(--rora-starlight)
+  # Loud-neutral surfaces (e.g. ha-toast on startup) sit on neutral-10 which
+  # is a LIGHT tinted-purple in this dark theme — text on it must be dark.
+  ha-color-on-neutral-loud: var(--rora-shadow)
 
   ha-color-on-disabled-quiet: var(--ha-color-neutral-80)
   ha-color-on-disabled-normal: var(--ha-color-neutral-70)
@@ -427,7 +429,9 @@ Rora:
   input-label-ink-color: var(--rora-veil)
   input-disabled-ink-color: var(--rora-haze)
   input-dropdown-icon-color: var(--rora-veil)
-  text-accent-color: var(--rora-violet)
+  # Text that sits ON the accent colour — e.g. the sidebar notification
+  # count badge, which has a Violet background. Must be dark to read.
+  text-accent-color: var(--rora-shadow)
 
   # Material design ripples & misc
   mdc-theme-primary: var(--rora-violet)
