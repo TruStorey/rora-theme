@@ -6,6 +6,7 @@ import {
   Braces,
   Code2,
   Ghost,
+  House,
   Terminal,
   type LucideIcon,
 } from "lucide-react";
@@ -57,6 +58,14 @@ export function AppsGrid() {
       status: "available",
       viewUrl:
         "https://github.com/TruStorey/rora-theme/tree/main/apps/sublime#install",
+    },
+    {
+      name: "Home Assistant",
+      blurb: "Full UI + dashboard theme — cards, sidebar, charts, editor.",
+      Icon: House,
+      status: "available",
+      viewUrl:
+        "https://github.com/TruStorey/rora-theme/tree/main/apps/home-assistant#install",
     },
   ];
 

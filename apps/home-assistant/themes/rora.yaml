@@ -1,0 +1,507 @@
+---
+# Rora — a cosy, calm dark theme for Home Assistant.
+# Deep arctic night, vivid aurora accents.
+#
+# Single dark theme. Pick "Rora" under Profile → Browser settings → Theme.
+# Full palette reference: https://github.com/TruStorey/rora-theme/blob/main/docs/rora-palette.md
+
+Rora:
+  ###############
+  # Rora colors #
+  ###############
+  # Backgrounds — the night sky
+  rora-void:      "#0d0b14"
+  rora-void-rgb:      13, 11, 20
+  rora-abyss:     "#12101c"
+  rora-abyss-rgb:     18, 16, 28
+  rora-dusk:      "#1a1728"
+  rora-dusk-rgb:      26, 23, 40
+  rora-twilight:  "#231f35"
+  rora-twilight-rgb:  35, 31, 53
+  rora-horizon:   "#2e2a45"
+  rora-horizon-rgb:   46, 42, 69
+
+  # Foregrounds — starlight to silence
+  rora-starlight: "#eddeff"
+  rora-starlight-rgb: 237, 222, 255
+  rora-veil:      "#a89cc8"
+  rora-veil-rgb:      168, 156, 200
+  rora-mist:      "#7a7096"
+  rora-mist-rgb:      122, 112, 150
+  rora-haze:      "#5c5175"
+  rora-haze-rgb:      92, 81, 117
+  rora-shadow:    "#4e4468"
+  rora-shadow-rgb:    78, 68, 104
+
+  # Aurora accents — cool spectrum
+  rora-violet:    "#b59eff"
+  rora-violet-rgb:    181, 158, 255
+  rora-dusk-rose: "#c084fc"
+  rora-dusk-rose-rgb: 192, 132, 252
+  rora-nebula:    "#d97fff"
+  rora-nebula-rgb:    217, 127, 255
+  rora-rosa:      "#f06cb8"
+  rora-rosa-rgb:      240, 108, 184
+  rora-dusk-pink: "#e86fa8"
+  rora-dusk-pink-rgb: 232, 111, 168
+  rora-polar:     "#7ec8f4"
+  rora-polar-rgb:     126, 200, 244
+  rora-glacier:   "#5ab4e8"
+  rora-glacier-rgb:   90, 180, 232
+  rora-aurora:    "#72f0c8"
+  rora-aurora-rgb:    114, 240, 200
+  rora-boreal:    "#4dd9b0"
+  rora-boreal-rgb:    77, 217, 176
+  rora-tundra:    "#38c4a8"
+  rora-tundra-rgb:    56, 196, 168
+
+  # Moonlight — the one warm note
+  rora-halo:      "#f0e6c0"
+  rora-halo-rgb:      240, 230, 192
+  rora-moonlight: "#e8d5a3"
+  rora-moonlight-rgb: 232, 213, 163
+  rora-dusk-gold: "#d4bc82"
+  rora-dusk-gold-rgb: 212, 188, 130
+
+  ################################
+  # Home Assistant color palette #
+  ################################
+  # 11-stop ramps that HA's modern design system reads from
+  # (src/resources/theme/color/core.globals.ts).
+  # In dark themes the convention inverts: low numbers are LIGHTER, high
+  # numbers are DARKER. Anchor stops live at -40 for primary, -50 for the rest.
+
+  # Primary (anchored at -40 on Violet)
+  ha-color-primary-05: rgb(234, 219, 255)
+  ha-color-primary-10: rgb(223, 206, 255)
+  ha-color-primary-20: rgb(209, 190, 255)
+  ha-color-primary-30: rgb(195, 174, 255)
+  ha-color-primary-40: rgb(181, 158, 255)
+  ha-color-primary-50: rgb(156, 136, 220)
+  ha-color-primary-60: rgb(131, 114, 184)
+  ha-color-primary-70: rgb(105, 92, 149)
+  ha-color-primary-80: rgb(80, 70, 114)
+  ha-color-primary-90: rgb(55, 48, 79)
+  ha-color-primary-95: rgb(38, 33, 55)
+
+  # Neutral (anchored at -50 on Mist)
+  ha-color-neutral-05: rgb(231, 216, 250)
+  ha-color-neutral-10: rgb(208, 194, 229)
+  ha-color-neutral-20: rgb(180, 167, 202)
+  ha-color-neutral-30: rgb(151, 140, 176)
+  ha-color-neutral-40: rgb(134, 123, 160)
+  ha-color-neutral-50: rgb(122, 112, 150)
+  ha-color-neutral-60: rgb(89, 82, 111)
+  ha-color-neutral-70: rgb(73, 67, 92)
+  ha-color-neutral-80: rgb(57, 51, 72)
+  ha-color-neutral-90: rgb(40, 36, 52)
+  ha-color-neutral-95: rgb(29, 26, 40)
+
+  # Orange — warning (anchored at -50 on Moonlight)
+  ha-color-orange-05: rgb(237, 222, 250)
+  ha-color-orange-10: rgb(236, 220, 232)
+  ha-color-orange-20: rgb(234, 218, 209)
+  ha-color-orange-30: rgb(233, 215, 186)
+  ha-color-orange-40: rgb(232, 214, 172)
+  ha-color-orange-50: rgb(232, 213, 163)
+  ha-color-orange-60: rgb(166, 152, 120)
+  ha-color-orange-70: rgb(133, 122, 99)
+  ha-color-orange-80: rgb(101, 92, 77)
+  ha-color-orange-90: rgb(68, 62, 56)
+  ha-color-orange-95: rgb(46, 41, 41)
+
+  # Red — error (anchored at -50 on Rosa)
+  ha-color-red-05: rgb(237, 216, 251)
+  ha-color-red-10: rgb(238, 194, 237)
+  ha-color-red-20: rgb(238, 165, 220)
+  ha-color-red-30: rgb(239, 136, 202)
+  ha-color-red-40: rgb(240, 119, 191)
+  ha-color-red-50: rgb(240, 108, 184)
+  ha-color-red-60: rgb(172, 79, 135)
+  ha-color-red-70: rgb(138, 64, 110)
+  ha-color-red-80: rgb(104, 50, 86)
+  ha-color-red-90: rgb(70, 35, 61)
+  ha-color-red-95: rgb(47, 26, 45)
+
+  # Green — success (anchored at -50 on Boreal)
+  ha-color-green-05: rgb(229, 222, 251)
+  ha-color-green-10: rgb(197, 221, 235)
+  ha-color-green-20: rgb(157, 220, 216)
+  ha-color-green-30: rgb(117, 218, 196)
+  ha-color-green-40: rgb(93, 218, 184)
+  ha-color-green-50: rgb(77, 217, 176)
+  ha-color-green-60: rgb(58, 155, 129)
+  ha-color-green-70: rgb(48, 124, 106)
+  ha-color-green-80: rgb(39, 93, 82)
+  ha-color-green-90: rgb(29, 62, 59)
+  ha-color-green-95: rgb(23, 42, 43)
+
+  ######################
+  # HA semantic tokens #
+  ######################
+  # Synced with src/resources/theme/color/semantic.globals.ts.
+  ha-color-focus: var(--ha-color-primary-40)
+
+  # Text
+  ha-color-text-primary: var(--rora-starlight)
+  ha-color-text-secondary: var(--rora-veil)
+  ha-color-text-disabled: var(--rora-haze)
+  ha-color-text-link: var(--rora-polar)
+
+  # Borders
+  ha-color-border-primary-quiet: var(--ha-color-primary-90)
+  ha-color-border-primary-normal: var(--ha-color-primary-70)
+  ha-color-border-primary-loud: var(--ha-color-primary-40)
+
+  ha-color-border-neutral-quiet: var(--ha-color-neutral-90)
+  ha-color-border-neutral-normal: var(--ha-color-neutral-60)
+  ha-color-border-neutral-loud: var(--ha-color-neutral-40)
+
+  ha-color-border-danger-quiet: var(--ha-color-red-90)
+  ha-color-border-danger-normal: var(--ha-color-red-70)
+  ha-color-border-danger-loud: var(--ha-color-red-50)
+
+  ha-color-border-warning-quiet: var(--ha-color-orange-90)
+  ha-color-border-warning-normal: var(--ha-color-orange-70)
+  ha-color-border-warning-loud: var(--ha-color-orange-50)
+
+  ha-color-border-success-quiet: var(--ha-color-green-90)
+  ha-color-border-success-normal: var(--ha-color-green-70)
+  ha-color-border-success-loud: var(--ha-color-green-50)
+
+  # Fills — primary
+  ha-color-fill-primary-quiet-resting: var(--ha-color-primary-95)
+  ha-color-fill-primary-quiet-hover: var(--ha-color-primary-90)
+  ha-color-fill-primary-quiet-active: var(--ha-color-primary-95)
+  ha-color-fill-primary-normal-resting: var(--ha-color-primary-90)
+  ha-color-fill-primary-normal-hover: var(--ha-color-primary-80)
+  ha-color-fill-primary-normal-active: var(--ha-color-primary-90)
+  ha-color-fill-primary-loud-resting: var(--ha-color-primary-40)
+  ha-color-fill-primary-loud-hover: var(--ha-color-primary-30)
+  ha-color-fill-primary-loud-active: var(--ha-color-primary-40)
+
+  # Fills — neutral
+  ha-color-fill-neutral-quiet-resting: var(--ha-color-neutral-95)
+  ha-color-fill-neutral-quiet-hover: var(--ha-color-neutral-90)
+  ha-color-fill-neutral-quiet-active: var(--ha-color-neutral-95)
+  ha-color-fill-neutral-normal-resting: var(--ha-color-neutral-90)
+  ha-color-fill-neutral-normal-hover: var(--ha-color-neutral-80)
+  ha-color-fill-neutral-normal-active: var(--ha-color-neutral-90)
+  ha-color-fill-neutral-loud-resting: var(--ha-color-neutral-40)
+  ha-color-fill-neutral-loud-hover: var(--ha-color-neutral-30)
+  ha-color-fill-neutral-loud-active: var(--ha-color-neutral-40)
+
+  # Fills — danger
+  ha-color-fill-danger-quiet-resting: var(--ha-color-red-95)
+  ha-color-fill-danger-quiet-hover: var(--ha-color-red-90)
+  ha-color-fill-danger-quiet-active: var(--ha-color-red-95)
+  ha-color-fill-danger-normal-resting: var(--ha-color-red-90)
+  ha-color-fill-danger-normal-hover: var(--ha-color-red-80)
+  ha-color-fill-danger-normal-active: var(--ha-color-red-90)
+  ha-color-fill-danger-loud-resting: var(--ha-color-red-50)
+  ha-color-fill-danger-loud-hover: var(--ha-color-red-40)
+  ha-color-fill-danger-loud-active: var(--ha-color-red-50)
+
+  # Fills — warning
+  ha-color-fill-warning-quiet-resting: var(--ha-color-orange-95)
+  ha-color-fill-warning-quiet-hover: var(--ha-color-orange-90)
+  ha-color-fill-warning-quiet-active: var(--ha-color-orange-95)
+  ha-color-fill-warning-normal-resting: var(--ha-color-orange-90)
+  ha-color-fill-warning-normal-hover: var(--ha-color-orange-80)
+  ha-color-fill-warning-normal-active: var(--ha-color-orange-90)
+  ha-color-fill-warning-loud-resting: var(--ha-color-orange-50)
+  ha-color-fill-warning-loud-hover: var(--ha-color-orange-40)
+  ha-color-fill-warning-loud-active: var(--ha-color-orange-50)
+
+  # Fills — success
+  ha-color-fill-success-quiet-resting: var(--ha-color-green-95)
+  ha-color-fill-success-quiet-hover: var(--ha-color-green-90)
+  ha-color-fill-success-quiet-active: var(--ha-color-green-95)
+  ha-color-fill-success-normal-resting: var(--ha-color-green-90)
+  ha-color-fill-success-normal-hover: var(--ha-color-green-80)
+  ha-color-fill-success-normal-active: var(--ha-color-green-90)
+  ha-color-fill-success-loud-resting: var(--ha-color-green-50)
+  ha-color-fill-success-loud-hover: var(--ha-color-green-40)
+  ha-color-fill-success-loud-active: var(--ha-color-green-50)
+
+  # On-* (text-on-fill)
+  ha-color-on-primary-quiet: var(--ha-color-primary-50)
+  ha-color-on-primary-normal: var(--ha-color-primary-40)
+  ha-color-on-primary-loud: var(--rora-void)
+
+  ha-color-on-neutral-quiet: var(--ha-color-neutral-50)
+  ha-color-on-neutral-normal: var(--ha-color-neutral-40)
+  ha-color-on-neutral-loud: var(--rora-starlight)
+
+  ha-color-on-disabled-quiet: var(--ha-color-neutral-80)
+  ha-color-on-disabled-normal: var(--ha-color-neutral-70)
+  ha-color-on-disabled-loud: var(--ha-color-neutral-95)
+
+  ha-color-on-danger-quiet: var(--ha-color-red-50)
+  ha-color-on-danger-normal: var(--ha-color-red-40)
+  ha-color-on-danger-loud: var(--rora-void)
+
+  ha-color-on-warning-quiet: var(--ha-color-orange-50)
+  ha-color-on-warning-normal: var(--ha-color-orange-40)
+  ha-color-on-warning-loud: var(--rora-void)
+
+  ha-color-on-success-quiet: var(--ha-color-green-50)
+  ha-color-on-success-normal: var(--ha-color-green-40)
+  ha-color-on-success-loud: var(--rora-void)
+
+  # Surfaces & forms
+  ha-color-surface-default: var(--rora-dusk)
+  ha-color-on-surface-default: var(--rora-starlight)
+
+  ha-color-form-background: var(--rora-twilight)
+  ha-color-form-background-hover: var(--rora-horizon)
+  ha-color-form-background-disabled: var(--rora-dusk)
+
+  ha-color-shadow-scrollable-fade: rgba(13, 11, 20, 0.55)
+
+  ##############################
+  # Legacy compatibility layer #
+  ##############################
+  # The classic var names HA cards and integrations still read from.
+
+  # Text
+  primary-text-color: var(--rora-starlight)
+  secondary-text-color: var(--rora-veil)
+  text-primary-color: var(--rora-void)
+  text-light-primary-color: var(--rora-void)
+  disabled-text-color: var(--rora-haze)
+
+  # Brand
+  primary-color: var(--rora-violet)
+  dark-primary-color: var(--ha-color-primary-30)
+  darker-primary-color: var(--ha-color-primary-20)
+  light-primary-color: var(--ha-color-primary-50)
+  accent-color: var(--rora-violet)
+  divider-color: rgba(var(--rora-horizon-rgb), 0.60)
+  outline-color: var(--rora-horizon)
+  outline-hover-color: var(--rora-twilight)
+
+  # RGB twins (used in rgba() expressions throughout HA cards)
+  rgb-primary-color: var(--rora-violet-rgb)
+  rgb-accent-color: var(--rora-violet-rgb)
+  rgb-primary-text-color: var(--rora-starlight-rgb)
+  rgb-secondary-text-color: var(--rora-veil-rgb)
+  rgb-text-primary-color: var(--rora-void-rgb)
+  rgb-card-background-color: var(--rora-dusk-rgb)
+  rgb-warning-color: var(--rora-moonlight-rgb)
+  rgb-error-color: var(--rora-rosa-rgb)
+  rgb-success-color: var(--rora-boreal-rgb)
+  rgb-info-color: var(--rora-polar-rgb)
+
+  # Semantic states
+  error-color: var(--rora-rosa)
+  warning-color: var(--rora-moonlight)
+  success-color: var(--rora-boreal)
+  info-color: var(--rora-polar)
+
+  # Backgrounds
+  primary-background-color: var(--rora-abyss)
+  secondary-background-color: var(--rora-twilight)
+  card-background-color: var(--rora-dusk)
+  clear-background-color: var(--card-background-color)
+  ha-card-background: var(--rora-dusk)
+  ha-card-border-color: rgba(var(--rora-horizon-rgb), 0.65)
+  ha-card-border-radius: 12px
+  ha-card-box-shadow: none
+
+  # Scrollbar
+  scrollbar-thumb-color: var(--rora-horizon)
+
+  # Label badge
+  label-badge-grey: var(--rora-mist)
+
+  # Sidebar
+  sidebar-background-color: var(--rora-void)
+  sidebar-text-color: var(--rora-veil)
+  sidebar-icon-color: var(--rora-veil)
+  sidebar-selected-text-color: var(--rora-violet)
+  sidebar-selected-icon-color: var(--rora-violet)
+  sidebar-selected-background-color: rgba(var(--rora-violet-rgb), 0.12)
+
+  # App header
+  app-header-background-color: var(--rora-void)
+  app-header-text-color: var(--rora-starlight)
+  app-header-edit-background-color: var(--rora-twilight)
+  app-header-edit-text-color: var(--rora-starlight)
+
+  # Toolbar / nav
+  toolbar-background-color: var(--rora-void)
+
+  # State icon
+  state-icon-color: var(--rora-veil)
+  state-icon-active-color: var(--rora-violet)
+  state-icon-unavailable-color: var(--rora-haze)
+  paper-item-icon-color: var(--rora-veil)
+  paper-item-icon-active-color: var(--rora-violet)
+
+  # State color (default active)
+  state-active-color: var(--rora-violet)
+  state-inactive-color: var(--rora-mist)
+  disabled-color: var(--rora-haze)
+
+  # Color word aliases (used by mushroom, custom cards, automations UI)
+  red-color: var(--rora-rosa)
+  pink-color: var(--rora-dusk-pink)
+  purple-color: var(--rora-nebula)
+  deep-purple-color: var(--rora-violet)
+  indigo-color: var(--rora-dusk-rose)
+  blue-color: var(--rora-polar)
+  light-blue-color: var(--rora-glacier)
+  cyan-color: var(--rora-tundra)
+  teal-color: var(--rora-aurora)
+  green-color: var(--rora-boreal)
+  light-green-color: var(--rora-aurora)
+  lime-color: var(--rora-tundra)
+  yellow-color: var(--rora-halo)
+  amber-color: var(--rora-moonlight)
+  orange-color: var(--rora-dusk-gold)
+  deep-orange-color: var(--rora-rosa)
+  brown-color: var(--rora-haze)
+  light-grey-color: var(--rora-shadow)
+  grey-color: var(--rora-mist)
+  dark-grey-color: var(--rora-haze)
+  blue-grey-color: var(--rora-mist)
+  black-color: var(--rora-void)
+  white-color: var(--rora-starlight)
+
+  # Per-domain active state — Violet is the workhorse,
+  # lights warm to Moonlight so a lit lamp reads as a lit lamp.
+  state-light-active-color: var(--rora-moonlight)
+  state-switch-active-color: var(--rora-violet)
+  state-fan-active-color: var(--rora-polar)
+  state-cover-active-color: var(--rora-violet)
+  state-climate-heat-color: var(--rora-rosa)
+  state-climate-cool-color: var(--rora-glacier)
+  state-climate-auto-color: var(--rora-aurora)
+  state-climate-dry-color: var(--rora-moonlight)
+  state-climate-fan_only-color: var(--rora-polar)
+  state-climate-heat_cool-color: var(--rora-dusk-rose)
+  state-media_player-active-color: var(--rora-violet)
+  state-vacuum-active-color: var(--rora-tundra)
+  state-automation-active-color: var(--rora-aurora)
+  state-script-active-color: var(--rora-aurora)
+  state-binary_sensor-active-color: var(--rora-violet)
+  state-person-home-color: var(--rora-aurora)
+  state-person-not_home-color: var(--rora-haze)
+  state-alarm_control_panel-armed-color: var(--rora-boreal)
+  state-alarm_control_panel-disarmed-color: var(--rora-moonlight)
+  state-alarm_control_panel-triggered-color: var(--rora-rosa)
+  state-lock-locked-color: var(--rora-boreal)
+  state-lock-unlocked-color: var(--rora-moonlight)
+  state-update-on-color: var(--rora-polar)
+
+  # Switches
+  switch-checked-color: var(--rora-violet)
+  switch-checked-button-color: var(--rora-violet)
+  switch-checked-track-color: var(--rora-violet)
+  switch-unchecked-color: var(--rora-haze)
+  switch-unchecked-button-color: var(--rora-haze)
+  switch-unchecked-track-color: var(--rora-shadow)
+
+  # Sliders
+  paper-slider-knob-color: var(--rora-violet)
+  paper-slider-knob-start-color: var(--rora-violet)
+  paper-slider-pin-color: var(--rora-violet)
+  paper-slider-active-color: var(--rora-violet)
+  paper-slider-container-color: var(--rora-horizon)
+  paper-slider-secondary-color: var(--rora-twilight)
+  paper-slider-disabled-active-color: var(--rora-haze)
+  paper-slider-disabled-secondary-color: var(--rora-twilight)
+  md-slider-inactive-track-color: var(--rora-horizon)
+
+  # Inputs (paper / mwc / md)
+  input-idle-line-color: var(--rora-shadow)
+  input-hover-line-color: var(--rora-violet)
+  input-disabled-line-color: var(--rora-haze)
+  input-outlined-idle-border-color: var(--rora-horizon)
+  input-outlined-hover-border-color: var(--rora-violet)
+  input-outlined-disabled-border-color: var(--rora-haze)
+  input-fill-color: var(--rora-twilight)
+  input-disabled-fill-color: var(--rora-dusk)
+  input-ink-color: var(--rora-starlight)
+  input-label-ink-color: var(--rora-veil)
+  input-disabled-ink-color: var(--rora-haze)
+  input-dropdown-icon-color: var(--rora-veil)
+  text-accent-color: var(--rora-violet)
+
+  # Material design ripples & misc
+  mdc-theme-primary: var(--rora-violet)
+  mdc-theme-secondary: var(--rora-violet)
+  mdc-theme-surface: var(--rora-dusk)
+  mdc-theme-on-primary: var(--rora-void)
+  mdc-theme-on-secondary: var(--rora-void)
+  mdc-theme-on-surface: var(--rora-starlight)
+  mdc-ripple-color: var(--rora-veil)
+  mdc-linear-progress-buffer-color: var(--rora-horizon)
+  mdc-checkbox-unchecked-color: var(--rora-mist)
+  mdc-checkbox-disabled-color: var(--rora-haze)
+  mdc-radio-unchecked-color: var(--rora-mist)
+  mdc-radio-disabled-color: var(--rora-haze)
+
+  # Code editors — match the Rora VS Code & Sublime syntax mapping
+  codemirror-background: var(--rora-twilight)
+  codemirror-foreground: var(--rora-starlight)
+  codemirror-cursor: var(--rora-rosa)
+  codemirror-selection: rgba(var(--rora-violet-rgb), 0.25)
+  codemirror-gutter-background: var(--rora-twilight)
+  codemirror-gutter-color: var(--rora-shadow)
+  codemirror-linenumber: var(--rora-shadow)
+  codemirror-keyword: var(--rora-violet)
+  codemirror-operator: var(--rora-dusk-rose)
+  codemirror-variable: var(--rora-aurora)
+  codemirror-variable-2: var(--rora-starlight)
+  codemirror-variable-3: var(--rora-starlight)
+  codemirror-builtin: var(--rora-nebula)
+  codemirror-atom: var(--rora-nebula)
+  codemirror-number: var(--rora-nebula)
+  codemirror-def: var(--rora-aurora)
+  codemirror-string: var(--rora-rosa)
+  codemirror-string-2: var(--rora-rosa)
+  codemirror-comment: var(--rora-mist)
+  codemirror-tag: var(--rora-polar)
+  codemirror-meta: var(--rora-mist)
+  codemirror-attribute: var(--rora-moonlight)
+  codemirror-property: var(--rora-polar)
+  codemirror-qualifier: var(--rora-dusk-gold)
+  codemirror-type: var(--rora-polar)
+
+  ##########
+  # Energy #
+  ##########
+  energy-grid-consumption-color: var(--rora-polar)
+  energy-grid-return-color: var(--rora-violet)
+  energy-solar-color: var(--rora-moonlight)
+  energy-non-fossil-color: var(--rora-boreal)
+  energy-battery-in-color: var(--rora-rosa)
+  energy-battery-out-color: var(--rora-aurora)
+  energy-gas-color: var(--rora-nebula)
+  energy-water-color: var(--rora-glacier)
+
+  ##########
+  # Graphs #
+  ##########
+  # 14 distinct hues for multi-series history & statistics graphs.
+  history-bg-color: var(--rora-dusk)
+  graph-color-1: var(--rora-violet)
+  graph-color-2: var(--rora-aurora)
+  graph-color-3: var(--rora-rosa)
+  graph-color-4: var(--rora-polar)
+  graph-color-5: var(--rora-nebula)
+  graph-color-6: var(--rora-moonlight)
+  graph-color-7: var(--rora-glacier)
+  graph-color-8: var(--rora-dusk-pink)
+  graph-color-9: var(--rora-boreal)
+  graph-color-10: var(--rora-halo)
+  graph-color-11: var(--rora-dusk-rose)
+  graph-color-12: var(--rora-tundra)
+  graph-color-13: var(--rora-dusk-gold)
+  graph-color-14: var(--rora-veil)
+
+  # Flag this as a single-mode dark theme.
+  modes:
+    dark: {}
