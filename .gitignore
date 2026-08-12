@@ -1,14 +1,5 @@
-node_modules
-.next
-out
-build
-dist
-.pnpm-store
-
 # logs
 *.log
-npm-debug.log*
-pnpm-debug.log*
 
 # env
 .env
@@ -19,7 +10,11 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
-# editors
+# editors / tooling
 .vscode/*
 !.vscode/extensions.json
 .idea
+.claude/
+
+# vsce packaging scratch
+node_modules

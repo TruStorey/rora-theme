@@ -2,7 +2,7 @@
   "name": "rora",
   "displayName": "Rora",
   "description": "A cosy, calm dark theme — vivid aurora accents against a deep arctic night.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "publisher": "rora-theme",
   "license": "MIT",
   "repository": {
@@ -14,7 +14,7 @@
     "vscode": "^1.85.0"
   },
   "scripts": {
-    "package": "vsce package --skip-license --out rora.vsix"
+    "package": "vsce package --out rora.vsix"
   },
   "categories": [
     "Themes"
