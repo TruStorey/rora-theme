@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="875" height="532" viewBox="0 0 875 532" role="img" aria-label="The Rora palette">
+<title>The Rora palette</title>
+<rect width="875" height="532" rx="14" fill="#12101c"/>
+<text x="32" y="42" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="600" fill="#eddeff">Backgrounds<tspan fill="#a89cc8" font-weight="400"> · the night sky</tspan></text>
+<rect x="32" y="56" width="73" height="44" rx="7" fill="#0d0b14" stroke="#2e2a45"/>
+<text x="32" y="117" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Void</text>
+<text x="32" y="131" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#0d0b14</text>
+<rect x="114" y="56" width="73" height="44" rx="7" fill="#12101c" stroke="#2e2a45"/>
+<text x="114" y="117" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Abyss</text>
+<text x="114" y="131" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#12101c</text>
+<rect x="196" y="56" width="73" height="44" rx="7" fill="#1a1728" stroke="#2e2a45"/>
+<text x="196" y="117" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Dusk</text>
+<text x="196" y="131" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#1a1728</text>
+<rect x="278" y="56" width="73" height="44" rx="7" fill="#231f35" stroke="#2e2a45"/>
+<text x="278" y="117" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Twilight</text>
+<text x="278" y="131" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#231f35</text>
+<rect x="360" y="56" width="73" height="44" rx="7" fill="#2e2a45" stroke="#2e2a45"/>
+<text x="360" y="117" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Horizon</text>
+<text x="360" y="131" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#2e2a45</text>
+<text x="32" y="165" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="600" fill="#eddeff">Foreground<tspan fill="#a89cc8" font-weight="400"> · starlight to silence</tspan></text>
+<rect x="32" y="179" width="73" height="44" rx="7" fill="#eddeff" stroke="#2e2a45"/>
+<text x="32" y="240" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Starlight</text>
+<text x="32" y="254" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#eddeff</text>
+<rect x="114" y="179" width="73" height="44" rx="7" fill="#a89cc8" stroke="#2e2a45"/>
+<text x="114" y="240" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Veil</text>
+<text x="114" y="254" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#a89cc8</text>
+<rect x="196" y="179" width="73" height="44" rx="7" fill="#7a7096" stroke="#2e2a45"/>
+<text x="196" y="240" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Mist</text>
+<text x="196" y="254" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#7a7096</text>
+<rect x="278" y="179" width="73" height="44" rx="7" fill="#5c5175" stroke="#2e2a45"/>
+<text x="278" y="240" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Haze</text>
+<text x="278" y="254" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#5c5175</text>
+<rect x="360" y="179" width="73" height="44" rx="7" fill="#4e4468" stroke="#2e2a45"/>
+<text x="360" y="240" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Shadow</text>
+<text x="360" y="254" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#4e4468</text>
+<text x="32" y="288" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="600" fill="#eddeff">Aurora accents<tspan fill="#a89cc8" font-weight="400"> · cool spectrum</tspan></text>
+<rect x="32" y="302" width="73" height="44" rx="7" fill="#b59eff" stroke="#2e2a45"/>
+<text x="32" y="363" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Violet</text>
+<text x="32" y="377" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#b59eff</text>
+<rect x="114" y="302" width="73" height="44" rx="7" fill="#c084fc" stroke="#2e2a45"/>
+<text x="114" y="363" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Dusk Rose</text>
+<text x="114" y="377" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#c084fc</text>
+<rect x="196" y="302" width="73" height="44" rx="7" fill="#d97fff" stroke="#2e2a45"/>
+<text x="196" y="363" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Nebula</text>
+<text x="196" y="377" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#d97fff</text>
+<rect x="278" y="302" width="73" height="44" rx="7" fill="#f06cb8" stroke="#2e2a45"/>
+<text x="278" y="363" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Rosa</text>
+<text x="278" y="377" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#f06cb8</text>
+<rect x="360" y="302" width="73" height="44" rx="7" fill="#e86fa8" stroke="#2e2a45"/>
+<text x="360" y="363" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Dusk Pink</text>
+<text x="360" y="377" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#e86fa8</text>
+<rect x="442" y="302" width="73" height="44" rx="7" fill="#7ec8f4" stroke="#2e2a45"/>
+<text x="442" y="363" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Polar</text>
+<text x="442" y="377" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#7ec8f4</text>
+<rect x="524" y="302" width="73" height="44" rx="7" fill="#5ab4e8" stroke="#2e2a45"/>
+<text x="524" y="363" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Glacier</text>
+<text x="524" y="377" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#5ab4e8</text>
+<rect x="606" y="302" width="73" height="44" rx="7" fill="#72f0c8" stroke="#2e2a45"/>
+<text x="606" y="363" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Aurora</text>
+<text x="606" y="377" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#72f0c8</text>
+<rect x="688" y="302" width="73" height="44" rx="7" fill="#4dd9b0" stroke="#2e2a45"/>
+<text x="688" y="363" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Boreal</text>
+<text x="688" y="377" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#4dd9b0</text>
+<rect x="770" y="302" width="73" height="44" rx="7" fill="#38c4a8" stroke="#2e2a45"/>
+<text x="770" y="363" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Tundra</text>
+<text x="770" y="377" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#38c4a8</text>
+<text x="32" y="411" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="600" fill="#eddeff">Moonlight<tspan fill="#a89cc8" font-weight="400"> · the one warm note</tspan></text>
+<rect x="32" y="425" width="73" height="44" rx="7" fill="#f0e6c0" stroke="#2e2a45"/>
+<text x="32" y="486" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Halo</text>
+<text x="32" y="500" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#f0e6c0</text>
+<rect x="114" y="425" width="73" height="44" rx="7" fill="#e8d5a3" stroke="#2e2a45"/>
+<text x="114" y="486" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Moonlight</text>
+<text x="114" y="500" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#e8d5a3</text>
+<rect x="196" y="425" width="73" height="44" rx="7" fill="#d4bc82" stroke="#2e2a45"/>
+<text x="196" y="486" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" fill="#eddeff">Dusk Gold</text>
+<text x="196" y="500" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#7a7096">#d4bc82</text>
+</svg>

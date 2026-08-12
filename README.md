@@ -32,16 +32,21 @@ Five background stops from deepest void to visible horizon, five foreground
 steps from starlight down to barely-there, ten cool aurora accents, and one
 warm lunar note.
 
-| | | |
-|---|---|---|
-| Abyss `#12101c` | Starlight `#eddeff` | Violet `#b59eff` |
-| Dusk `#1a1728` | Veil `#a89cc8` | Aurora `#72f0c8` |
-| Horizon `#2e2a45` | Mist `#7a7096` | Polar `#7ec8f4` |
+![The Rora palette](docs/rora-palette.svg)
 
-**[Full palette reference →](docs/rora-palette.md)** — all 25 colours with
+**[Full palette reference →](docs/rora-palette.md)** — all 23 colours with
 names, hex values, roles, and the naming system behind them.
 
 ---
+
+## Contributing
+
+Rora is one palette ported six ways, so a colour change touches every port —
+[CONTRIBUTING.md](CONTRIBUTING.md) explains how that works, how to test each
+theme, and how to add a new one.
+
+Found a security issue? Please don't open a public issue — see
+[SECURITY.md](SECURITY.md).
 
 ## Licence
 
