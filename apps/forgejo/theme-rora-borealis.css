@@ -1,0 +1,426 @@
+/* ============================================================
+   Rora Borealis — for Forgejo 15.x
+
+   Same palette and syntax colours as Rora; different workbench
+   accents. Green and pink UI accents, violet reserved for
+   selection, moonlight for emphasis and stars.
+
+   Install:
+     <CUSTOM_PATH>/public/assets/css/theme-rora-borealis.css
+
+   Register in app.ini:
+     [ui]
+     THEMES = forgejo-auto,forgejo-light,forgejo-dark,rora-borealis
+     DEFAULT_THEME = rora-borealis
+
+   Differs from base Rora in:
+     - primary is Boreal, not Glacier — links, active tabs, and
+       the logo all move from blue to green
+     - selection and highlight surfaces use Violet
+     - reactions use Dusk Pink
+     - syntax colours are unchanged: the palette assigns Polar to
+       types and Glacier to references, so code keeps its blues
+   ============================================================ */
+
+gitea-theme-meta-info {
+  --theme-display-name: "Rora Borealis";
+}
+
+:root {
+  --is-dark-theme: true;
+  color-scheme: dark;
+  accent-color: var(--color-accent);
+  --border-radius: 6px;
+
+  /* ---------- Primary · Boreal ---------- */
+  --color-primary: #4dd9b0;
+  --color-primary-contrast: #0d0b14;
+  --color-primary-dark-1: #62deba;
+  --color-primary-dark-2: #78e2c3;
+  --color-primary-dark-3: #8de7cc;
+  --color-primary-dark-4: #a2ebd6;
+  --color-primary-dark-5: #b8f0df;
+  --color-primary-dark-6: #cdf4e9;
+  --color-primary-dark-7: #e3f9f2;
+  --color-primary-light-1: #3acda3;
+  --color-primary-light-2: #2cba93;
+  --color-primary-light-3: #249d7c;
+  --color-primary-light-4: #1d8065;
+  --color-primary-light-5: #16634e;
+  --color-primary-light-6: #0f4637;
+  --color-primary-light-7: #092a21;
+  --color-primary-alpha-10: #4dd9b01a;
+  --color-primary-alpha-20: #4dd9b033;
+  --color-primary-alpha-30: #4dd9b04d;
+  --color-primary-alpha-40: #4dd9b066;
+  --color-primary-alpha-50: #4dd9b080;
+  --color-primary-alpha-60: #4dd9b099;
+  --color-primary-alpha-70: #4dd9b0b3;
+  --color-primary-alpha-80: #4dd9b0cc;
+  --color-primary-alpha-90: #4dd9b0e6;
+  --color-primary-hover: var(--color-primary-light-1);
+  --color-primary-active: var(--color-primary-light-2);
+
+  /* ---------- Secondary · Horizon ---------- */
+  --color-secondary: #2e2a45;
+  --color-secondary-dark-1: #3b3751;
+  --color-secondary-dark-2: #48445e;
+  --color-secondary-dark-3: #55516a;
+  --color-secondary-dark-4: #625e76;
+  --color-secondary-dark-5: #706b83;
+  --color-secondary-dark-6: #7d788f;
+  --color-secondary-dark-7: #8a859c;
+  --color-secondary-dark-8: #9792a8;
+  --color-secondary-dark-9: #a49fb4;
+  --color-secondary-dark-10: #b1acc1;
+  --color-secondary-dark-11: #beb9cd;
+  --color-secondary-dark-12: #cbc7da;
+  --color-secondary-dark-13: #d8d4e6;
+  --color-secondary-light-1: #242137;
+  --color-secondary-light-2: #1b1929;
+  --color-secondary-light-3: #12101c;
+  --color-secondary-light-4: #0b0a11;
+  --color-secondary-alpha-10: #2e2a451a;
+  --color-secondary-alpha-20: #2e2a4533;
+  --color-secondary-alpha-30: #2e2a454d;
+  --color-secondary-alpha-40: #2e2a4566;
+  --color-secondary-alpha-50: #2e2a4580;
+  --color-secondary-alpha-60: #2e2a4599;
+  --color-secondary-alpha-70: #2e2a45b3;
+  --color-secondary-alpha-80: #2e2a45cc;
+  --color-secondary-alpha-90: #2e2a45e6;
+  --color-secondary-button: var(--color-secondary-dark-4);
+  --color-secondary-hover: var(--color-secondary-dark-3);
+  --color-secondary-active: var(--color-secondary-dark-2);
+
+  /* ---------- Named colours ---------- */
+  /* red · Rosa */
+  --color-red: #f06cb8;
+  --color-red-light: #f282c3;
+  --color-red-dark-1: #ec55ad;
+  --color-red-dark-2: #e73ea2;
+  --color-red-badge: #f06cb8;
+  --color-red-badge-bg: #f06cb81a;
+  --color-red-badge-hover-bg: #f06cb84d;
+  /* orange · Dusk Gold */
+  --color-orange: #d4bc82;
+  --color-orange-light: #dbc799;
+  --color-orange-dark-1: #cbaf69;
+  --color-orange-dark-2: #c1a352;
+  --color-orange-badge: #d4bc82;
+  --color-orange-badge-bg: #d4bc821a;
+  --color-orange-badge-hover-bg: #d4bc824d;
+  /* yellow · Moonlight */
+  --color-yellow: #e8d5a3;
+  --color-yellow-light: #eddeb7;
+  --color-yellow-dark-1: #dfc98a;
+  --color-yellow-dark-2: #d6bc71;
+  --color-yellow-badge: #e8d5a3;
+  --color-yellow-badge-bg: #e8d5a31a;
+  --color-yellow-badge-hover-bg: #e8d5a34d;
+  /* olive · Halo (reused — no olive in palette) */
+  --color-olive: #f0e6c0;
+  --color-olive-light: #f3ecd0;
+  --color-olive-dark-1: #eadca8;
+  --color-olive-dark-2: #e4d290;
+  /* green · Boreal */
+  --color-green: #4dd9b0;
+  --color-green-light: #68e0be;
+  --color-green-dark-1: #3acda3;
+  --color-green-dark-2: #30b892;
+  --color-green-badge: #4dd9b0;
+  --color-green-badge-bg: #4dd9b01a;
+  --color-green-badge-hover-bg: #4dd9b04d;
+  /* teal · Tundra */
+  --color-teal: #38c4a8;
+  --color-teal-light: #56cfb7;
+  --color-teal-dark-1: #30b197;
+  --color-teal-dark-2: #299b84;
+  /* blue · Glacier */
+  --color-blue: #5ab4e8;
+  --color-blue-light: #7cc3ed;
+  --color-blue-dark-1: #3da6e1;
+  --color-blue-dark-2: #2896d5;
+  /* violet · Violet */
+  --color-violet: #b59eff;
+  --color-violet-light: #c4b1ff;
+  --color-violet-dark-1: #a58aff;
+  --color-violet-dark-2: #9475ff;
+  /* purple · Dusk Rose */
+  --color-purple: #c084fc;
+  --color-purple-light: #cc9bfd;
+  --color-purple-dark-1: #b46efb;
+  --color-purple-dark-2: #a858fa;
+  /* pink · Dusk Pink */
+  --color-pink: #e86fa8;
+  --color-pink-light: #ed85b6;
+  --color-pink-dark-1: #e3589a;
+  --color-pink-dark-2: #dd418c;
+  /* brown · Dusk Gold (reused — no brown in palette) */
+  --color-brown: #d4bc82;
+  --color-brown-light: #dbc799;
+  --color-brown-dark-1: #cbaf69;
+  --color-brown-dark-2: #c1a352;
+  /* neutrals */
+  --color-black: #0d0b14;
+  --color-black-light: #1a1728;
+  --color-black-dark-1: #0a0810;
+  --color-black-dark-2: #07060c;
+  --color-grey: #7a7096;
+  --color-grey-light: #a89cc8;
+  --color-gold: #e8d5a3;
+  --color-white: #fff;
+  --color-git: #d4bc82;
+
+  /* ---------- Surfaces ---------- */
+  --color-body: #12101c;              /* Abyss */
+  --color-box-header: #1a1728;        /* Dusk */
+  --color-box-body: var(--color-body);
+  --color-box-body-highlight: #b59eff1a;   /* Violet — selection */
+  --color-footer: #0d0b14;            /* Void */
+  --color-menu: #0d0b14;
+  --color-card: var(--color-body);
+  --color-light: var(--color-body);
+  --color-light-border: #2e2a45;      /* Horizon */
+  --color-button: #231f35;            /* Twilight */
+  --color-hover: #28243d;
+  --color-hover-opaque: var(--color-box-header);
+  --color-active: #b59eff26;          /* Violet — selection */
+  --color-timeline: #2e2a45b3;
+  --color-project-column-bg: #0d0b14;
+  --color-editor-line-highlight: #2e2a45;
+  --color-expand-button: #16634e;
+  --color-code-bg: unset;
+  --color-secondary-bg: unset;
+  --color-shadow: #0d0b1466;
+  --color-shadow-opaque: var(--color-shadow);
+  --color-overlay-backdrop: #0d0b1499;
+  --color-markup-table-row: #1a1728;
+  --color-markup-code-block: #1a1728;
+  --color-markup-code-inline: #a89cc81a;
+  --color-light-mimic-enabled: rgba(0, 0, 0, calc(40 / 255 * 222 / 255 / var(--opacity-disabled)));
+
+  /* ---------- Text ---------- */
+  --color-text: #eddeff;              /* Starlight */
+  --color-text-light: #eddeff;
+  --color-text-light-1: #a89cc8;      /* Veil */
+  --color-text-light-2: #a89cc8;
+  --color-text-light-3: #7a7096;      /* Mist */
+  --color-text-dark: #eddeff;
+  --color-placeholder-text: #5c5175;  /* Haze */
+  --color-caret: #e8d5a3;             /* Moonlight — per palette */
+  --color-accent: #4dd9b0;
+  --color-small-accent: #16634e;
+  --color-logo: var(--color-primary);
+  --color-highlight-fg: #e8d5a3;      /* Moonlight */
+  --color-highlight-bg: #e8d5a326;
+
+  /* ---------- Navigation & labels ---------- */
+  --color-nav-bg: #1a1728;
+  --color-nav-hover-bg: #a89cc81a;
+  --color-nav-text: var(--color-text);
+  --color-secondary-nav-bg: var(--color-body);
+  --color-label-text: var(--color-text);
+  --color-label-bg: #a89cc81a;
+  --color-label-hover-bg: #a89cc826;
+  --color-label-active-bg: var(--color-label-hover-bg);
+  --color-tooltip-text: #eddeff;
+  --color-tooltip-bg: #2e2a45;
+  --color-reaction-bg: initial;
+  --color-reaction-hover-bg: #e86fa81a;    /* Dusk Pink */
+  --color-reaction-active-bg: #e86fa826;
+
+  /* ---------- Form inputs ---------- */
+  --color-input-text: var(--color-text);
+  --color-input-background: #1a1728;
+  --color-input-toggle-background: var(--color-body);
+  --color-input-border: var(--color-light-border);
+  --color-input-border-hover: var(--color-secondary-dark-1);
+
+  /* ---------- Status ---------- */
+  --color-error-bg: #f06cb81a;
+  --color-error-bg-active: #f06cb880;
+  --color-error-bg-hover: #f06cb84d;
+  --color-error-border: #f06cb866;
+  --color-error-text: #f06cb8;
+  --color-success-bg: #4dd9b01a;
+  --color-success-border: #4dd9b066;
+  --color-success-text: #4dd9b0;
+  --color-warning-bg: #e8d5a31a;
+  --color-warning-border: #e8d5a366;
+  --color-warning-text: #e8d5a3;
+  --color-info-bg: #7ec8f41a;
+  --color-info-border: #7ec8f466;
+  --color-info-text: #7ec8f4;
+
+  /* ---------- Diffs ---------- */
+  --color-diff-added-linenum-bg: #4dd9b04d;
+  --color-diff-added-row-bg: #4dd9b026;
+  --color-diff-added-row-border: #4dd9b026;
+  --color-diff-added-word-bg: #4dd9b066;
+  --color-diff-removed-linenum-bg: #e86fa84d;
+  --color-diff-removed-row-bg: #e86fa81a;
+  --color-diff-removed-row-border: #e86fa81a;
+  --color-diff-removed-word-bg: #e86fa866;
+  --color-diff-moved-row-bg: #e8d5a326;
+  --color-diff-moved-row-border: #e8d5a326;
+  --color-diff-inactive: #1a1728;
+
+  /* ---------- Console / ANSI ---------- */
+  --color-console-fg: #eddeff;
+  --color-console-fg-subtle: #7a7096;
+  --color-console-bg: #0d0b14;
+  --color-console-border: #2e2a45b3;
+  --color-console-active-bg: #231f35;
+  --color-console-hover-bg: #a89cc81a;
+  --color-console-menu-bg: #0d0b14;
+  --color-console-menu-border: #2e2a45b3;
+  --color-ansi-black: #0d0b14;
+  --color-ansi-red: #f06cb8;
+  --color-ansi-green: #4dd9b0;
+  --color-ansi-yellow: #e8d5a3;
+  --color-ansi-blue: #5ab4e8;
+  --color-ansi-magenta: #d97fff;
+  --color-ansi-cyan: #38c4a8;
+  --color-ansi-white: #a89cc8;
+  --color-ansi-bright-black: #5c5175;
+  --color-ansi-bright-red: #f282c3;
+  --color-ansi-bright-green: #68e0be;
+  --color-ansi-bright-yellow: #f0e6c0;
+  --color-ansi-bright-blue: #7ec8f4;
+  --color-ansi-bright-magenta: #c084fc;
+  --color-ansi-bright-cyan: #72f0c8;
+  --color-ansi-bright-white: #eddeff;
+
+}
+
+/* Monochrome emoji glyphs render near-invisibly on a dark background;
+   inverting brings them back. Matches on aria-label, so it is not tied
+   to any particular Forgejo version. */
+.emoji[aria-label="check mark"],
+.emoji[aria-label="currency exchange"],
+.emoji[aria-label="TOP arrow"],
+.emoji[aria-label="END arrow"],
+.emoji[aria-label="ON! arrow"],
+.emoji[aria-label="SOON arrow"],
+.emoji[aria-label="heavy dollar sign"],
+.emoji[aria-label="copyright"],
+.emoji[aria-label="registered"],
+.emoji[aria-label="trade mark"],
+.emoji[aria-label="multiply"],
+.emoji[aria-label="plus"],
+.emoji[aria-label="minus"],
+.emoji[aria-label="divide"],
+.emoji[aria-label="curly loop"],
+.emoji[aria-label="double curly loop"],
+.emoji[aria-label="wavy dash"],
+.emoji[aria-label="paw prints"],
+.emoji[aria-label="musical note"],
+.emoji[aria-label="musical notes"] {
+  filter: invert() hue-rotate(180deg);
+}
+
+/* ============================================================
+   Syntax highlighting — Chroma token rules
+
+   Forgejo 15 hardcodes token colours as direct rules on .chroma
+   classes rather than reading CSS variables, so these must be
+   written out. Append to each Rora theme file.
+
+   Palette roles:
+     Violet   keywords          Dusk Rose  operators, punctuation
+     Nebula   numbers, consts   Rosa       strings
+     Polar    types, classes    Glacier    references, properties
+     Aurora   functions         Tundra     variables, decorators
+     Mist     comments          Halo       emphasis
+   ============================================================ */
+
+/* ---------- Keywords · Violet ---------- */
+.chroma .k,
+.chroma .kd,
+.chroma .kn,
+.chroma .kr { color: #b59eff; }
+.chroma .kc { color: #d97fff; }   /* true / false / null — Nebula */
+.chroma .kp { color: #c084fc; }   /* pseudo — Dusk Rose */
+.chroma .kt { color: #7ec8f4; }   /* types — Polar */
+
+/* ---------- Names ---------- */
+.chroma .n,
+.chroma .nx,
+.chroma .vm { color: #eddeff; }   /* plain identifiers — Starlight */
+.chroma .nf,
+.chroma .fm,
+.chroma .nb { color: #72f0c8; }   /* functions, builtins — Aurora */
+.chroma .nc,
+.chroma .nn { color: #7ec8f4; }   /* classes, namespaces — Polar */
+.chroma .no { color: #d97fff; }   /* constants — Nebula */
+.chroma .nv,
+.chroma .vc,
+.chroma .vg,
+.chroma .vi,
+.chroma .na,
+.chroma .nd,
+.chroma .nt { color: #38c4a8; }   /* variables, attrs, tags — Tundra */
+.chroma .py,
+.chroma .nl,
+.chroma .ni { color: #5ab4e8; }   /* properties, labels — Glacier */
+.chroma .bp { color: #c084fc; }   /* self / this — Dusk Rose */
+.chroma .ne { color: #f06cb8; }   /* exceptions — Rosa */
+
+/* ---------- Numbers & literals · Nebula ---------- */
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .mo,
+.chroma .il,
+.chroma .l,
+.chroma .ld { color: #d97fff; }
+
+/* ---------- Strings · Rosa ---------- */
+.chroma .s,
+.chroma .s1,
+.chroma .s2,
+.chroma .sa,
+.chroma .sb,
+.chroma .sc,
+.chroma .sd,
+.chroma .sh,
+.chroma .sx,
+.chroma .ss,
+.chroma .dl { color: #f06cb8; }
+.chroma .se,
+.chroma .si { color: #d97fff; }   /* escapes, interpolation — Nebula */
+.chroma .sr { color: #72f0c8; }   /* regex — Aurora */
+
+/* ---------- Operators & punctuation · Dusk Rose ---------- */
+.chroma .o,
+.chroma .p { color: #c084fc; }
+.chroma .ow { color: #b59eff; }   /* word operators (and, in) — Violet */
+
+/* ---------- Comments · Mist ---------- */
+.chroma .c,
+.chroma .c1,
+.chroma .ch,
+.chroma .cm { color: #7a7096; }
+.chroma .cs { color: #a89cc8; }   /* special — Veil */
+.chroma .cp { color: #b59eff; }   /* preprocessor — Violet */
+.chroma .cpf { color: #f06cb8; }  /* preprocessor file — Rosa */
+
+/* ---------- Generic / diff tokens ---------- */
+.chroma .gd { color: #eddeff; background-color: #e86fa826; }
+.chroma .gi { color: #eddeff; background-color: #4dd9b026; }
+.chroma .ge { color: #f0e6c0; font-style: italic; }
+.chroma .gs { color: #f0e6c0; font-weight: 600; }
+.chroma .gh { color: #5ab4e8; }
+.chroma .gu { color: #7ec8f4; }
+.chroma .gp { color: #7a7096; }
+.chroma .go { color: #a89cc8; }
+.chroma .gr,
+.chroma .gt { color: #f06cb8; }
+.chroma .gl { text-decoration: underline; }
+
+/* ---------- Errors & whitespace ---------- */
+.chroma .err { color: #f06cb8; }
+.chroma .w { color: #4e4468; }    /* Shadow */

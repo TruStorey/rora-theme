@@ -105,8 +105,8 @@ All colours follow the arctic night theme namespace.
 
 ## Variant namespace
 
-Rora is the base dark variant. Borealis ships today for VS Code — same
-palette, same syntax, different workbench accents. The rest are reserved:
+Rora is the base dark variant. Borealis ships today for VS Code and Forgejo —
+same palette, same syntax, different workbench accents. The rest are reserved:
 
 | Name | Concept |
 |------|---------|

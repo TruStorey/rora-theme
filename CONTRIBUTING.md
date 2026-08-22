@@ -1,6 +1,6 @@
 # Contributing to Rora
 
-Thanks for looking. Rora is one palette ported across six apps, and almost
+Thanks for looking. Rora is one palette ported across seven apps, and almost
 everything here follows from that one fact.
 
 ## The one rule
@@ -27,6 +27,7 @@ colour *is*, it ripples.
 | [`apps/gnome-terminal/`](apps/gnome-terminal) | `install.sh` writing a dconf profile |
 | [`apps/sublime/`](apps/sublime) | Sublime Text colour scheme + UI theme |
 | [`apps/home-assistant/`](apps/home-assistant) | Home Assistant `rora.yaml` |
+| [`apps/forgejo/`](apps/forgejo) | Forgejo theme CSS — variables plus explicit Chroma syntax rules |
 | [`docs/`](docs) | Palette reference, generated swatches, poster |
 | [`scripts/`](scripts) | Palette asset generator · VS Code variant generator |
 
@@ -52,7 +53,7 @@ looking like one theme when you move between terminals.
    `grep -ri '<old-hex>' apps/` will find them all.
 4. Test the ports you can (see below) and say in the PR which ones you couldn't.
 
-Nobody has all six apps installed. Being explicit about what you tested and
+Nobody has all seven apps installed. Being explicit about what you tested and
 what you didn't is genuinely more useful than pretending.
 
 ## Testing a port
