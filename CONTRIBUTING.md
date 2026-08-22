@@ -21,14 +21,14 @@ colour *is*, it ripples.
 
 | Path | What it is |
 |------|-----------|
-| [`apps/vscode/`](apps/vscode) | VS Code extension — manifest, theme JSON, and a committed `rora.vsix` |
+| [`apps/vscode/`](apps/vscode) | VS Code extension — manifest, two theme JSONs, and a committed `rora.vsix` |
 | [`apps/terminal/`](apps/terminal) | Windows Terminal fragment — **the reference ANSI palette** |
 | [`apps/ghostty/`](apps/ghostty) | Ghostty theme file |
 | [`apps/gnome-terminal/`](apps/gnome-terminal) | `install.sh` writing a dconf profile |
 | [`apps/sublime/`](apps/sublime) | Sublime Text colour scheme + UI theme |
 | [`apps/home-assistant/`](apps/home-assistant) | Home Assistant `rora.yaml` |
 | [`docs/`](docs) | Palette reference, generated swatches, poster |
-| [`scripts/`](scripts) | Palette asset generator |
+| [`scripts/`](scripts) | Palette asset generator · VS Code variant generator |
 
 The Rora **website is not in this repo** — it lives separately. Nothing here
 needs Node, npm, or a package manager, and it should stay that way.
@@ -76,6 +76,33 @@ follows, so they're the honest test. A few shortcuts for development:
 - **Windows Terminal** — [`apps/terminal/rora-showcase.ps1`](apps/terminal/rora-showcase.ps1)
   prints a sample of the palette in situ, which makes ANSI slot changes obvious.
 
+## VS Code theme variants
+
+`apps/vscode/themes/rora-color-theme.json` is the base theme and the one you
+edit. **`rora-borealis-color-theme.json` is generated — don't hand-edit it.**
+VS Code has no theme inheritance, so a variant has to be a full copy; rather
+than maintain two 670-line files by hand, Borealis is the base plus a table of
+24 workbench overrides living in
+[`scripts/gen-vscode-variants.py`](scripts/gen-vscode-variants.py).
+
+After any change to the base theme, or to the override table:
+
+```bash
+python3 scripts/gen-vscode-variants.py
+```
+
+To confirm the committed variants aren't stale (exits non-zero with a diff if
+they are):
+
+```bash
+python3 scripts/gen-vscode-variants.py --check
+```
+
+Borealis differs from Rora in the `colors` block only — `tokenColors` and
+`semanticTokenColors` are copied through, so the two themes are always
+syntax-identical. A change that should apply to *both* themes goes in the base;
+a change that is Borealis-only goes in the override table.
+
 ## The VS Code `.vsix`
 
 `apps/vscode/rora.vsix` is a build artifact that is deliberately committed, so
@@ -84,6 +111,7 @@ repackage it**, or the file users download will silently disagree with the
 source:
 
 ```bash
+python3 scripts/gen-vscode-variants.py   # regenerate variants first
 cd apps/vscode
 # bump "version" in package.json first
 pnpm dlx @vscode/vsce package --out rora.vsix
@@ -94,8 +122,10 @@ contents changed under an unchanged version number is worse than no artifact.
 Verify the result matches its source:
 
 ```bash
-unzip -p apps/vscode/rora.vsix extension/themes/rora-color-theme.json \
-  | diff - apps/vscode/themes/rora-color-theme.json && echo "matches source"
+for t in rora-color-theme rora-borealis-color-theme; do
+  unzip -p apps/vscode/rora.vsix "extension/themes/$t.json" \
+    | diff - "apps/vscode/themes/$t.json" && echo "matches source: $t"
+done
 ```
 
 ## Commits

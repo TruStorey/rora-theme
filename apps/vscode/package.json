@@ -2,7 +2,7 @@
   "name": "rora",
   "displayName": "Rora",
   "description": "A cosy, calm dark theme — vivid aurora accents against a deep arctic night.",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "publisher": "rora-theme",
   "license": "MIT",
   "repository": {
@@ -32,6 +32,11 @@
         "label": "Rora",
         "uiTheme": "vs-dark",
         "path": "./themes/rora-color-theme.json"
+      },
+      {
+        "label": "Rora Borealis",
+        "uiTheme": "vs-dark",
+        "path": "./themes/rora-borealis-color-theme.json"
       }
     ]
   },

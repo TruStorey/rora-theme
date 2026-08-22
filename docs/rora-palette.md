@@ -105,12 +105,13 @@ All colours follow the arctic night theme namespace.
 
 ## Variant namespace
 
-Rora is the base dark variant. The naming system supports future variants:
+Rora is the base dark variant. Borealis ships today for VS Code — same
+palette, same syntax, different workbench accents. The rest are reserved:
 
 | Name | Concept |
 |------|---------|
 | **Rora** | Base · the canonical dark theme |
-| **Rora Borealis** | More vivid accents · higher saturation |
+| **Rora Borealis** | Green and pink UI accents · violet reserved for selection |
 | **Rora Polaris** | Muted · the one fixed star · stable and calm |
 | **Rora Solstice** | The longest night · deepest backgrounds |
 | **Rora Equinox** | Balanced · midpoint variant |

@@ -28,7 +28,14 @@ No `code` command on your PATH? Open VS Code → Command Palette →
 ### Apply
 
 Restart VS Code, then open the Command Palette and run **Preferences:
-Color Theme** → **Rora**.
+Color Theme** → **Rora** or **Rora Borealis**.
+
+Two themes, one palette. **Rora** is the canonical dark theme, violet
+throughout. **Rora Borealis** keeps the identical syntax colours and
+recolours the workbench accents only — Aurora green marks where you are
+(active tab, active activity bar icon, active panel, search matches) and
+Rosa pink marks counts (source control, extensions, search results).
+Violet stays the selection and focus colour in both.
 
 Verify from the shell:
 
@@ -51,6 +58,9 @@ overwrites the existing copy.
   to the same palette.
 - The integrated terminal — ANSI colours match the Rora Windows Terminal
   scheme one-for-one.
+- Both themes share every one of the above. Borealis differs from Rora in
+  24 workbench colours and nothing else — no syntax colour changes between
+  them.
 
 ## Palette
 

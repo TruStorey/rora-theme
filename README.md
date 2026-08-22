@@ -13,7 +13,7 @@ note of moonlight used sparingly.
 
 | App | What ships | Install |
 |-----|-----------|---------|
-| **[VS Code](apps/vscode)** | Extension (`.vsix`) + colour theme | [Install](apps/vscode#install) |
+| **[VS Code](apps/vscode)** | Extension (`.vsix`) + two colour themes — Rora and Rora Borealis | [Install](apps/vscode#install) |
 | **[Windows Terminal](apps/terminal)** | Theme fragment · the reference ANSI palette | [Install](apps/terminal#install) |
 | **[Ghostty](apps/ghostty)** | Theme file | [Install](apps/ghostty#install) |
 | **[GNOME Terminal](apps/gnome-terminal)** | `install.sh` (dconf profile) | [Install](apps/gnome-terminal#install) |
