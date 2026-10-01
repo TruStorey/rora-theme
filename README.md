@@ -19,6 +19,7 @@ note of moonlight used sparingly.
 | **[GNOME Terminal](apps/gnome-terminal)** | `install.sh` (dconf profile) | [Install](apps/gnome-terminal#install) |
 | **[Sublime Text](apps/sublime)** | Colour scheme + UI theme | [Install](apps/sublime#install) |
 | **[Home Assistant](apps/home-assistant)** | `rora.yaml` theme | [Install](apps/home-assistant#install) |
+| **[Forgejo](apps/forgejo)** | Borealis theme CSS (Forgejo 15.x) | [Install](apps/forgejo#install) |
 
 The terminal ports share one ANSI palette — Windows Terminal, Ghostty, GNOME
 Terminal, and the VS Code integrated terminal match slot-for-slot, so Rora
@@ -41,7 +42,7 @@ names, hex values, roles, and the naming system behind them.
 
 ## Contributing
 
-Rora is one palette ported six ways, so a colour change touches every port —
+Rora is one palette ported seven ways, so a colour change touches every port —
 [CONTRIBUTING.md](CONTRIBUTING.md) explains how that works, how to test each
 theme, and how to add a new one.
 
