@@ -294,6 +294,13 @@ gitea-theme-meta-info {
 
 }
 
+/* Text selection · Violet. Forgejo's base ::selection rule is
+   !important, so this must be too. Alpha matches VS Code Borealis. */
+::selection {
+  background: #b59eff55 !important;
+  color: var(--color-text) !important;   /* Starlight */
+}
+
 /* Monochrome emoji glyphs render near-invisibly on a dark background;
    inverting brings them back. Matches on aria-label, so it is not tied
    to any particular Forgejo version. */
